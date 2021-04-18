@@ -4,7 +4,7 @@ let conf = {
   url1: {
     number: 1,
     url:
-      "https://rmis.registratura96.ru/#!/group/department_34860/service/3711482/resource/36031636/planning/2021/05/!/",
+      "https://rmis.registratura96.ru/#!/group/department_34860/service/3712097/resource/26588806/planning/2021/04/!/",
     name: "Обвинцева",
     client: "Кудинов Алексей",
     polis: "6650320846001107",

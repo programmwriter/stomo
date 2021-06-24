@@ -4,14 +4,14 @@ let conf = {
   url1: {
     number: 1,
     url:
-      "https://rmis.registratura96.ru/#!/group/department_34860/service/3712097/resource/26588806/planning/2021/04/!/",
-    name: "Обвинцева",
-    client: "Кудинов Алексей",
-    polis: "6650320846001107",
-    day: "03",
-    month: "09",
-    year: "1976",
-    phone: "9320147585",
+      "https://rmis.registratura96.ru/#!/group/department_34860/service/3712099/resource/26776943/planning/2021/07/!/",
+    name: "Игумнова",
+    client: "Шпортак Диана",
+    polis: "6693989783001723",
+    day: "16",
+    month: "06",
+    year: "2010",
+    phone: "9126920811",
   },
   url2: {
     number: 2,

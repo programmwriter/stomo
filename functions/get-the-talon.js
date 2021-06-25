@@ -18,7 +18,7 @@ const getTheTalon = async (browser, url, data) => {
         const agreePhoneLink = "#confirmValue";
         await page.waitForSelector(agreePhoneLink);
         await page.waitForTimeout(300);
-        // await page.click(agreePhoneLink);
+        await page.click(agreePhoneLink);
         await page.waitForTimeout(300);
         await page.screenshot({path: `screenShot${Math.random()}.png`});
         const quitLk = "#header-btn-mylk-exit";

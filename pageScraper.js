@@ -5,14 +5,14 @@ const login = require('./functions/login');
 const isLogedIn = require('./functions/is-loged-in');
 
 
-const config = require("./config");
+
 const scraperObject = {
     url: "https://rmis.registratura96.ru/#!/group/department_34860/service/3712099/resource/26776943/planning/2021/07/!/",
-    async scraper(browser){
+    async scraper(browser, config){
         try{
-            const [dayLinks, openedPage] = await findFreeDay(browser, this.url, config.url1)
+            const [dayLinks, openedPage] = await findFreeDay(browser, config)
             const timeLinks = await findFreeTimeUrls(openedPage, dayLinks[0])
-            timeLinks.map(link => getTheTalon(browser, link, config.url1))
+            timeLinks.map(link => getTheTalon(browser, link, config))
             await Promise.all(timeLinks)
         }catch (e) {
             console.log(`
@@ -21,7 +21,7 @@ const scraperObject = {
                 ************************()**************************
                 `);
             console.log(e);
-            await this.scraper(browser);
+            await this.scraper(browser, config);
         }
     }
 }

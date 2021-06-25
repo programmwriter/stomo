@@ -1,9 +1,10 @@
 const login = require('./login');
 const isLogedIn = require('./is-loged-in');
-const findFreeDay = async (browser, url, config) => {
+const findFreeDay = async (browser, config) => {
+    console.log(`i am start finding`)
     let newPage = await browser.newPage();
     newPage = await login(newPage, config)
-    await newPage.goto(url);
+    await newPage.goto(config.url);
     const isLogged = await isLogedIn(newPage)
     console.log("-> isLogged", isLogged);
     if(!isLogged) {
@@ -21,7 +22,7 @@ const findFreeDay = async (browser, url, config) => {
         await newPage.reload();
         if (count === 99) {
             await newPage.close();
-            result =  await findFreeDay(browser, url, config);
+            result =  await findFreeDay(browser, config);
         }
     }
     if (result.length) {
